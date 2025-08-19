@@ -4,6 +4,22 @@
 
 @layer base {
   :root {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+  }
+  body {
+    @apply bg-[#f9fafb] text-[#111827];
+  }
+  input, button, select, textarea {
+    @apply bg-[#f9fafb] text-[#111827] border-[#1a3d7c] placeholder:text-[#6b7280];
+  }
+  ::placeholder {
+    @apply text-[#6b7280];
+  }
+}
+
+@layer base {
+  :root {
     --background: 249 250 251; /* #f9fafb */
     --foreground: 17 24 39; /* #111827 */
     --card: 255 255 255;
