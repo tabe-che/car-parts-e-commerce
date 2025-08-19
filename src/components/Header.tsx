@@ -44,7 +44,7 @@ export default function Header() {
               <Input
                 type="search"
                 placeholder="Search for car parts..."
-                className="pl-10 pr-4 w-full"
+                className="pl-10 pr-4 w-full bg-[#f9fafb] placeholder:text-[#6b7280] text-[#111827] border-[#1a3d7c] focus:border-[#f97316]"
               />
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Header() {
           {/* Cart and Menu */}
           <div className="flex items-center space-x-4">
             <Link to="/cart" className="relative">
-              <Button variant="outline" size="icon" className="relative">
+              <Button variant="outline" size="icon" className="relative bg-[#1a3d7c] hover:bg-[#f97316] text-white">
                 <ShoppingCart className="h-4 w-4" />
                 {cartItemCount > 0 && (
                   <Badge className="absolute -top-2 -right-2 bg-accent text-white text-xs min-w-[1.25rem] h-5 flex items-center justify-center rounded-full">
@@ -61,7 +61,7 @@ export default function Header() {
                 )}
               </Button>
             </Link>
-            <Button variant="outline" size="icon" className="lg:hidden">
+            <Button variant="outline" size="icon" className="lg:hidden bg-[#1a3d7c] hover:bg-[#f97316] text-white">
               <Menu className="h-4 w-4" />
             </Button>
           </div>
@@ -74,8 +74,8 @@ export default function Header() {
               <NavigationMenuItem>
                 <Link 
                   to="/" 
-                  className={`px-4 py-2 rounded-md transition-colors ${
-                    isActive('/') ? 'bg-primary text-white' : 'text-gray-700 hover:text-primary'
+                  className={`px-4 py-2 rounded-md transition-colors text-[#111827] hover:text-[#f97316] ${
+                    isActive('/') ? 'bg-primary text-white !text-white' : ''
                   }`}
                 >
                   Home
@@ -83,28 +83,28 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-700 hover:text-primary">
+                <NavigationMenuTrigger className="text-[#111827] hover:text-[#f97316]">
                   Categories
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px]">
                     <div className="grid grid-cols-2 gap-4">
-                      <Link to="/products?category=engine" className="hover:text-primary">
+                      <Link to="/products?category=engine" className="text-[#111827] hover:text-[#f97316]">
                         Engine Parts
                       </Link>
-                      <Link to="/products?category=brakes" className="hover:text-primary">
+                      <Link to="/products?category=brakes" className="text-[#111827] hover:text-[#f97316]">
                         Brake System
                       </Link>
-                      <Link to="/products?category=suspension" className="hover:text-primary">
+                      <Link to="/products?category=suspension" className="text-[#111827] hover:text-[#f97316]">
                         Suspension
                       </Link>
-                      <Link to="/products?category=electrical" className="hover:text-primary">
+                      <Link to="/products?category=electrical" className="text-[#111827] hover:text-[#f97316]">
                         Electrical
                       </Link>
-                      <Link to="/products?category=filters" className="hover:text-primary">
+                      <Link to="/products?category=filters" className="text-[#111827] hover:text-[#f97316]">
                         Filters & Fluids
                       </Link>
-                      <Link to="/products?category=accessories" className="hover:text-primary">
+                      <Link to="/products?category=accessories" className="text-[#111827] hover:text-[#f97316]">
                         Accessories
                       </Link>
                     </div>
@@ -115,8 +115,8 @@ export default function Header() {
               <NavigationMenuItem>
                 <Link 
                   to="/products" 
-                  className={`px-4 py-2 rounded-md transition-colors ${
-                    isActive('/products') ? 'bg-primary text-white' : 'text-gray-700 hover:text-primary'
+                  className={`px-4 py-2 rounded-md transition-colors text-[#111827] hover:text-[#f97316] ${
+                    isActive('/products') ? 'bg-primary text-white !text-white' : ''
                   }`}
                 >
                   All Products
@@ -126,8 +126,8 @@ export default function Header() {
               <NavigationMenuItem>
                 <Link 
                   to="/about" 
-                  className={`px-4 py-2 rounded-md transition-colors ${
-                    isActive('/about') ? 'bg-primary text-white' : 'text-gray-700 hover:text-primary'
+                  className={`px-4 py-2 rounded-md transition-colors text-[#111827] hover:text-[#f97316] ${
+                    isActive('/about') ? 'bg-primary text-white !text-white' : ''
                   }`}
                 >
                   About
@@ -137,8 +137,8 @@ export default function Header() {
               <NavigationMenuItem>
                 <Link 
                   to="/contact" 
-                  className={`px-4 py-2 rounded-md transition-colors ${
-                    isActive('/contact') ? 'bg-primary text-white' : 'text-gray-700 hover:text-primary'
+                  className={`px-4 py-2 rounded-md transition-colors text-[#111827] hover:text-[#f97316] ${
+                    isActive('/contact') ? 'bg-primary text-white !text-white' : ''
                   }`}
                 >
                   Contact
